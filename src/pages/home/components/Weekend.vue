@@ -2,7 +2,7 @@
   <div>
     <div class="title">周末去哪儿</div>
     <ul>
-      <li class="item border-bottom" v-for="item of recommendList"
+      <li class="item border-bottom" v-for="item of list"
           :key="item.id">
         <div class="item-img-wrapper">
           <img class="item-img" :src='item.imgUrl'/>
@@ -18,34 +18,26 @@
 <script>
 export default{
   name: 'HomeWeekend',
+  props: {
+    list: Array
+  },
   data () {
     return {
-      recommendList: [{
-        id: '0001',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1708/2b/2b3b94de99c0a425a3.img.jpg_256x160_6b62ea82.jpg',
-        title: '大连胜亚海洋世界',
-        desc: '浪漫大连首战，浪漫的海洋主题公园'
-      }, {
-        id: '0002',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1708/2b/2b3b94de99c0a425a3.img.jpg_256x160_6b62ea82.jpg',
-        title: '大连胜亚海洋世界',
-        desc: '浪漫大连首战，浪漫的海洋主题公园'
-      }]
     }
   }
 }
 </script>
 <style lang="stylus" scoped>
 @import "~style/mixins.styl"
+/* padding-bottom 37.09%  图片的高除以宽得出来的百分比*/
 .title
-  margin-top .2rem
   line-height .8rem
   background #eeeeee
   text-indent .2rem
 .item-img-wrapper
   height 0rem
   overflow hidden
-  padding-bottom 62.8%
+  padding-bottom 37.09%
 .item-img
   width 100%
 .item-info

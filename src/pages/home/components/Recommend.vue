@@ -2,12 +2,12 @@
   <div>
     <div class="recommend-title">热销推荐</div>
     <ul>
-      <li class="item border-bottom" v-for="item of recommendList"
+      <li class="item border-bottom" v-for="item of list"
           :key="item.id">
         <img class="item-img" :src='item.imgUrl'/>
         <div class="item-info">
           <p class="item-title">{{item.title}}</p>
-          <p class="item-desc">{{item.desc}}</p>
+          <p class="item-desc">{{item.address}}</p>
           <button class="item-button">查看详情</button>
         </div>
       </li>
@@ -17,29 +17,11 @@
 <script>
 export default{
   name: 'HomeRecommend',
+  props: {
+    list: Array
+  },
   data () {
     return {
-      recommendList: [{
-        id: '0001',
-        imgUrl: 'http://imgs.qunarzz.com/p/tts5/1605/fd/555756ef1acec0f7.jpg_r_480x320x90_13ce738d.jpg',
-        title: '大连胜亚海洋世界',
-        desc: '浪漫大连首战，浪漫的海洋主题公园'
-      }, {
-        id: '0002',
-        imgUrl: 'http://imgs.qunarzz.com/p/tts5/1605/fd/555756ef1acec0f7.jpg_r_480x320x90_13ce738d.jpg',
-        title: '大连胜亚海洋世界',
-        desc: '浪漫大连首战，浪漫的海洋主题公园'
-      }, {
-        id: '0003',
-        imgUrl: 'http://imgs.qunarzz.com/p/tts5/1605/fd/555756ef1acec0f7.jpg_r_480x320x90_13ce738d.jpg',
-        title: '大连胜亚海洋世界',
-        desc: '浪漫大连首战，浪漫的海洋主题公园'
-      }, {
-        id: '0004',
-        imgUrl: 'http://imgs.qunarzz.com/p/tts5/1605/fd/555756ef1acec0f7.jpg_r_480x320x90_13ce738d.jpg',
-        title: '大连胜亚海洋世界',
-        desc: '浪漫大连首战，浪漫的海洋主题公园'
-      }]
     }
   }
 }
