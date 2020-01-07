@@ -24,7 +24,7 @@ export default{
     return {
       swiperOption: {
         pagination: '.swiper-pagination',
-        autoplay: false
+        autoplay: false // autoplay属性是设置禁止自动滚动
       }
     }
   },
