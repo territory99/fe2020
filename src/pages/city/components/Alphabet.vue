@@ -6,11 +6,12 @@
       :key="item"
       :ref="item"
       @click="handleLetterClick"
-      @touchstart="handleTouchStart"
+      @touchstart.prevent="handleTouchStart"
       @touchmove="handleTouchMove"
       @touchend="handleTouchEnd"
     >{{item}}
     </li>
+    <!-- prevent修饰符，阻止默认事件-->
   </ul>
 </template>
 <script>
