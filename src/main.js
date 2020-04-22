@@ -10,11 +10,16 @@ import 'style/reset.css'
 import 'style/border.css'
 import 'style/iconfont.css'
 import 'swiper/dist/css/swiper.css'
+import filters from './filters/index'
 
 Vue.config.productionTip = false
 fastClick.attach(document.body)
 Vue.use(VueAwesomeSwiper)
 
+// 定义过滤器
+Object.keys(filters).forEach(key => {
+  Vue.filter(key, filters[key])
+})
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

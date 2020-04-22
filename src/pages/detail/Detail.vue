@@ -4,6 +4,7 @@
     <detail-header></detail-header>
     <div class="content">
       <detail-list :list="categoryList"></detail-list>
+      <div>{{ numb | capitalize}}</div>
     </div>
   </div>
 </template>
@@ -19,7 +20,8 @@ export default {
       sightName: '',
       bannerImg: '',
       gallaryImgs: [],
-      categoryList: []
+      categoryList: [],
+      numb: 'aabbssaa'
     }
   },
   components: {
